@@ -1,0 +1,29 @@
+<div class = "container">
+  <h2 class = "page-header">What To Do?</h2>
+  <form (submit) = "addContact()">
+    <div class = "form-group">
+      <label>To Do: </label>
+      <input type = "text" [(ngModel)] = "to_do" name = "to_do" class = "form-control">
+  </div>
+  <input type = "submit" class = "btn btn btn-success" value = "Add">
+  </form>
+</div>
+
+
+<hr>
+
+
+<div class = "container">
+  <div *ngFor = "lets fill To-Do list">
+    <div class = "col-md-3">
+        {{contact.to_do}}
+    </div>
+    <div class = "col-md-3">
+      {{contact.phone}}
+    </div>
+    <div class = "col-md-3">
+        <input type = "button" (click) = "deleteContent(contact._id)" value = "Delete" class = "btn btn-danger">
+    </div>
+  </div>
+
+</div>
